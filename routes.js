@@ -6,24 +6,9 @@ Router.configure({
 });
 
 // Initialize the loading template before hand
-
-animateContentOut = function() {
-    $('#yielding').removeClass("animated fadeIn");
-    
-};
-
 // define this as a global onBeforeAction so it happens all the time
 // Router.onBeforeAction('loading');
-Router.onBeforeAction(animateContentOut)
 
-
-fadeContentIn = function() {
-    $('#yielding').addClass("animated fadeIn");
-
-}
-
-// define this as a global onAfterAction so it happens all the time
-Router.onAfterAction(fadeContentIn)
 // Map the routes
 Router.map(function() {
   // Homepage
@@ -31,8 +16,12 @@ Router.map(function() {
     path: '/'
   });
 
-  this.route('work', {
-    path: '/work'
+  this.route('about', {
+    path: '/about'
+  });
+
+  this.route('survey', {
+    path: '/survey'
   });
   
   this.route('contact', {
